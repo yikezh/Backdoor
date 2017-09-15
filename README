@@ -1,0 +1,8 @@
+Created a ¡°backdoor¡± on Linux that allows the hacker access to the system at a later date, without exploiting the same vulnerabilities (they may be fixed in the meantime). 
+
+Let the backdoor pretend to be a HTTP 1.1 web server. A web server makes a great pretense for a backdoor, because web traffic is so prevalent that it is permitted through firewalls.
+
+Used Socket to create an end point for communication. Used File Descriptor and accept method to set up a connection. Read and parsed an HTTP request to get the command. 
+
+Created a pipe between the program and the child process. Executed the command in child process and sent the result back by an HTTP response. 
+
